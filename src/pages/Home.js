@@ -18,19 +18,20 @@ const Home = () => {
             }
         }
     const click=(acase)=>{
+
     	settype(acase)
     	getanime()
     }
 
 	return (
 		<Box sx={{height:"90vh" ,bgcolor:"#0b0a0f",mt:2,overflow:"hidden"}} >
-			<Box sx={{height:"10vh",bgcolor:"transparent",display:"flex",pt:"15px"}} >
-				<Typography variant="h5" sx={{ml:6,color:"wheat",width:"80px",mr:"3vw"}}>find by</Typography>
-				<Chip onClick={()=>click("popular")} label="Popular" color="primary" sx={{mr:"3vw",height:"40px",width:"150px"}} />
-				<Chip onClick={()=>click("rating")} label="Rating" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} />
-				<Chip onClick={()=>click("new")} label="New" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} />
-				<Chip onClick={()=>click("trending")} label="Trending" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} />
-			</Box>
+			<Grid container  sx={{height:"10vh",bgcolor:"transparent",display:"flex",pt:"15px"}} >
+				<Grid item  xs={12}md={2}><Typography variant="h5" sx={{ml:6,color:"wheat",width:"80px",mr:"3vw"}}>find by</Typography></Grid>
+				<Grid item  xs={2}><Chip onClick={()=>click("popular")} label="Popular" color="primary" sx={{mr:"3vw",height:"40px",width:"150px"}} /></Grid>
+				<Grid item  xs={2}><Chip onClick={()=>click("rating")} label="Rating" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} /></Grid>
+				<Grid item  xs={2}><Chip onClick={()=>click("new")} label="New" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} /></Grid>
+				<Grid item  xs={2}><Chip onClick={()=>click("trending")} label="Trending" color="primary" sx={{mx:"3vw",height:"40px",width:"150px"}} /></Grid>
+			</Grid>
 			<Box sx={{mt:5}} >
 
 				<Paper elevation={3} sx={{height:"73vh",borderRadius:2,bgcolor:"#18191a",m:5,mt:4}}>

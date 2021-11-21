@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import {Box,Paper,Grid,Stack,Button,Typography} from '@mui/material'
+import {Box,Paper,Grid,Stack,Typography} from '@mui/material'
 import {POST} from '../api.js'
 import {useParams} from 'react-router-dom'
 
@@ -21,6 +21,7 @@ const Details = () => {
         }
         getanime();
 	}, [id,data,setdata])
+
 	return (
 		<Box sx={{height:"90vh" ,bgcolor:"#0b0a0f",mt:2,overflowX:"hidden"}} >
 			<Grid container >
@@ -34,12 +35,9 @@ const Details = () => {
 						<Stack>
 							<Box sx={{display:"flex"}}>
 								<Stack sx={{p:2}}>
-									<Box sx={{display:"flex"}}>
-										<Typography variant="h3" sx={{width:"95%",color:"yellow"}}>
-											{data.title}
-										</Typography>
-										<Button variant="contained" sx={{width:5}}>add</Button>
-									</Box>
+									<Typography variant="h3" sx={{width:"95%",color:"yellow"}}>
+										{data.title}
+									</Typography>
 									<Typography variant="h6" sx={{color:"orange"}}>
 										{data.title}
 									</Typography >
@@ -53,9 +51,6 @@ const Details = () => {
 										{data.synopsis}
 									</Typography>
 								</Stack>
-							</Box>
-							<Box>
-
 							</Box>
 						</Stack>
 					</Paper>
